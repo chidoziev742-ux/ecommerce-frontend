@@ -1,0 +1,100 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  padding: 0 5%;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  line-height: 1.2;
+}
+
+.hero-left h2 {
+  font-size: 26px;
+  color: #090909;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-hand-icon p {
+  font-size: 90px;
+  font-weight: 700;
+  color: #171717;
+  margin: 0;
+}
+
+.hero-hand-icon img {
+  width: 80px;
+  height: auto;
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.hero-left p {
+  font-size: 90px;
+  font-weight: 700;
+  color: #171717;
+  margin: 0;
+}
+
+.hero-latest-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 220px;
+  height: 70px;
+  border-radius: 75px;
+  background: #ff4141;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-latest-btn:hover {
+  transform: scale(1.05);
+  background: #e33a3a;
+}
+
+.hero-latest-btn img {
+  width: 24px;
+  height: auto;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+}
