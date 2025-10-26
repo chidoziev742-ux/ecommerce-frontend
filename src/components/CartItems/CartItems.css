@@ -1,0 +1,149 @@
+.cartitems {
+  margin: 100px 170px;
+  color: #454545;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cartitems hr {
+  height: 2px;
+  background: #e2e2e2;
+  border: 0;
+}
+
+/* Header Row */
+.cartitems-header {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+/* Product Rows */
+.cartitems-row {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  font-size: 16px;
+  padding: 20px 0;
+}
+
+.cartitems-product-img {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cartitems-quantity {
+  width: 64px;
+  height: 40px;
+  border: 2px solid #ebebeb;
+  background: white;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: default;
+}
+
+.cartitems-remove-icon {
+  width: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cartitems-remove-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Cart Summary Section */
+.cartitems-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.cartitems-total {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.cartitems-grandtotal h3 {
+  color: #2e2e2e;
+}
+
+.checkout-btn {
+  background: #ff4141;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #e13a3a;
+}
+
+/* Promo Code Section */
+.cartitems-promocode {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cartitems-promobox {
+  display: flex;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.cartitems-promobox input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #e2e2e2;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.cartitems-promobox button {
+  padding: 10px 20px;
+  background: #ff4141;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.cartitems-promobox button:hover {
+  background: #e13a3a;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .cartitems {
+    margin: 60px 30px;
+  }
+
+  .cartitems-header,
+  .cartitems-row {
+    grid-template-columns: 1.2fr 2fr 1fr 1fr 1fr 0.5fr;
+    font-size: 14px;
+  }
+
+  .cartitems-summary {
+    flex-direction: column;
+  }
+}
