@@ -1,34 +1,126 @@
 .popular {
+  width: 100%;
+  padding: 60px 6%;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-
-  /* ❌ Remove fixed height (caused overlap)
-     ✅ Let it expand naturally */
-  min-height: 90vh; /* or remove entirely if you want it to flow naturally */
-  padding: 60px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .popular h1 {
-  font-size: 50px;
-  font-weight: 600;
-  color: #111827;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
 .popular hr {
-  width: 200px;
-  height: 6px;
-  background: #252525;
-  border-radius: 10px;
+  width: 80px;
+  height: 4px;
   border: none;
+  background-color: #ff4d6d;
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
 }
 
 .popular-item {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.popular-item .item {
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  padding: 1rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+}
+
+.popular-item .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.popular-item .item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.popular-item .item:hover img {
+  transform: scale(1.05);
+}
+
+.popular-item .item h2,
+.popular-item .item p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 1024px) {
+  .popular {
+    padding: 50px 5%;
+  }
+  .popular h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular {
+    padding: 40px 4%;
+  }
+  .popular h1 {
+    font-size: 1.6rem;
+  }
+  .popular-item {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular {
+    padding: 30px 3%;
+  }
+
+  .popular h1 {
+    font-size: 1.4rem;
+  }
+
+  .popular-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .popular-item .item {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .popular hr {
+    margin-bottom: 1.8rem;
+  }
+}
+@media (max-width: 360px) {
+  .popular h1 {
+    font-size: 1.2rem;
+  }
+
+  .popular-item .item {
+    padding: 0.6rem;
+  }
 }

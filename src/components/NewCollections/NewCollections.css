@@ -1,72 +1,85 @@
+
 .new-collections {
-  padding: 80px 5%;
+  width: 100%;
+  padding: 60px 6%;
   background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
   color: #222;
   font-family: "Poppins", sans-serif;
 }
 
-/* Title */
 .new-collections h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 700;
   color: #111;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
-/* Accent underline */
 .new-collections hr {
-  width: 100px;
+  width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #111, #555);
   border: none;
-  margin: 10px auto 40px;
-  border-radius: 10px;
+  background: linear-gradient(90deg, #111, #555);
+  border-radius: 2px;
+  margin-bottom: 2.5rem;
 }
 
-/* Collection Grid */
 .collections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
   justify-items: center;
 }
 
-/* Each Item Card (if using Item component) */
 .collections .item {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  padding: 1rem;
   overflow: hidden;
+  width: 100%;
   max-width: 280px;
+  box-sizing: border-box;
 }
 
 .collections .item:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Image */
 .collections .item img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-/* Text Info */
+.collections .item:hover img {
+  transform: scale(1.05);
+}
+
 .collections .item-info {
-  padding: 15px;
   text-align: left;
+  padding-top: 0.8rem;
 }
 
 .collections .item-info h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 8px;
+  margin: 0.5rem 0;
 }
 
 .collections .item-info .price {
@@ -86,17 +99,58 @@
   font-weight: 500;
 }
 
-/* Responsive tweaks */
+
+@media (max-width: 1024px) {
+  .new-collections {
+    padding: 50px 5%;
+  }
+  .new-collections h1 {
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   .new-collections {
-    padding: 60px 3%;
+    padding: 40px 4%;
+  }
+  .new-collections h1 {
+    font-size: 1.6rem;
+  }
+  .collections {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-collections {
+    padding: 30px 3%;
   }
 
   .new-collections h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .collections {
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .collections .item {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .new-collections hr {
+    margin-bottom: 1.8rem;
+  }
+}
+@media (max-width: 360px) {
+  .new-collections h1 {
+    font-size: 1.2rem;
+  }
+
+  .collections .item {
+    padding: 0.6rem;
   }
 }
