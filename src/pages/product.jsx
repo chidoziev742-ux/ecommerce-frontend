@@ -3,7 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import { useParams } from "react-router-dom";
 import Breadcrum from "../components/Breadcrums/Breadcrum";
 import ProductDisplay from "../components/ProductDisplay/ProductDisplay";
-import DescriptionBox from "../components/DescriptionBox/DescriptionBox"; // ✅ added this
+import DescriptionBox from "../components/DescriptionBox/DescriptionBox"; //  added this
 import RelatedProducts from "../components/RelatedProducts/RelatedProduts";
 
 const Product = () => {
